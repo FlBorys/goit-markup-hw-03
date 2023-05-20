@@ -44,11 +44,6 @@ img {
   padding-bottom: 24px;
 }
 
-.page-header .container {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 .header-menu {
   display: flex;
   align-items: center;
