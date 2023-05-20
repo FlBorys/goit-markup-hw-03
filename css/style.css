@@ -33,10 +33,15 @@ img {
   max-width: 1158px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* Header */
+
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+}
 
 .header-menu {
   display: flex;
@@ -44,7 +49,6 @@ img {
   padding-bottom: 24px;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #e7e9fc;
 }
 
 .navigation {
@@ -70,9 +74,11 @@ img {
   text-decoration: none;
 }
 
-.link .logo-part {
+.navigation .logo {
   margin-right: 76px;
+}
 
+.link .logo-part {
   color: var(--primary-header-color);
   font-family: "Raleway", sans-serif;
   font-weight: 800;
