@@ -25,10 +25,15 @@ p {
   margin-bottom: 0;
 }
 
+img {
+  display: block;
+}
+
 .container {
   max-width: 1158px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 15px;
 }
 
 /* Header */
@@ -39,19 +44,17 @@ p {
   padding-bottom: 24px;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #e7e9fc;
 }
 
 .navigation {
   display: flex;
+  align-items: center;
 }
 
 .navigation .menu {
   display: flex;
   gap: 40px;
-}
-
-.menu .item:first-child {
-  margin-left: 76px;
 }
 
 /* Logo */
@@ -68,6 +71,8 @@ p {
 }
 
 .link .logo-part {
+  margin-right: 76px;
+
   color: var(--primary-header-color);
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -150,7 +155,7 @@ ul {
 .hero-box .title {
   display: inline-block;
   margin-bottom: 48px;
-  width: 496px;
+  max-width: 496px;
   color: var(--additional-text-color);
   font-weight: 700;
   font-size: 56px;
@@ -185,26 +190,34 @@ ul {
 
 /* Section quality */
 
-.section .container {
-  max-width: 1158px;
+.section {
   padding-top: 120px;
   padding-bottom: 120px;
+}
+
+.section .container {
+  max-width: 1158px;
 }
 
 .title-hidden {
   display: none;
 }
 
-.list .quality {
-  display: inline-block;
-  width: 264px;
+.section .list {
+  display: flex;
 }
 
-.list .quality:not(:first-child) {
-  margin-left: 24px;
+.list .quality {
+  display: inline-block;
+  width: calc((100% - 72px) / 4);
+}
+
+.list .quality:not(:last-child) {
+  margin-right: 24px;
 }
 
 .list .quality .title {
+  margin-bottom: 8px;
   color: var(--primary-header-color);
   font-weight: 500;
   font-size: 20px;
@@ -215,18 +228,22 @@ ul {
 .list .quality .text {
   font-size: 16px;
   line-height: 1.5;
-  margin-top: 8px;
 }
 
 /* Section service */
 
-.section-service .container {
-  max-width: 1158px;
+.section-service {
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
+.section-service .container {
+  max-width: 1158px;
+}
+
 .section-service .title {
+  margin-bottom: 72px;
+
   color: var(--primary-header-color);
   font-style: normal;
   font-weight: 700;
@@ -237,28 +254,26 @@ ul {
   text-transform: capitalize;
 }
 
-.list .image {
-  display: inline-block;
-  margin-top: 72px;
+.container .list-image {
+  display: flex;
+  gap: 24px;
 }
 
-.list .image:not(:first-child) {
-  margin-left: 24px;
+.list-image .image {
+  width: calc((100% - 48px) / 3);
 }
 
 /* Our team */
 
 .section-team {
+  padding: 120px 0;
   background-color: var(--portfolio-button);
-}
-
-.section-team .container {
-  padding-top: 120px;
-  padding-bottom: 120px;
 }
 
 .section-team .container .title {
   margin-top: 120px;
+  margin-bottom: 72px;
+
   color: var(--primary-header-color);
   font-weight: 700;
   font-size: 36px;
@@ -268,25 +283,29 @@ ul {
   text-transform: capitalize;
 }
 
-.list .list-item {
+.container .list-team {
+  display: flex;
+  gap: 24px;
+}
+
+.list-team .list-item {
   margin-bottom: 120px;
-  display: inline-block;
-  width: 264px;
-  margin-top: 72px;
+  width: calc((100% - 72px) / 4);
+  border-radius: 0px 0px 4px 4px;
+
   background-color: var(--additional-text-color);
 }
 
-.list .list-item:not(:first-child) {
-  margin-left: 24px;
-}
-
-.list .list-item .member {
+.list-team .list-item .member {
   width: 232px;
-  margin: 32px 16px;
+  padding: 32px 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .list-item .member .title {
   margin-top: 0;
+  margin-bottom: 8px;
   display: block;
   color: var(--primary-header-color);
   font-weight: 500;
@@ -300,18 +319,18 @@ ul {
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
-  margin-top: 8px;
 }
 
 /* Footer */
 
 .footer {
+  padding: 100px 0;
   background-color: var(--primary-header-color);
 }
 
-footer .container {
-  padding-top: 100px;
-  padding-bottom: 100px;
+.footer .container a {
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .container .footer-logo {
@@ -342,7 +361,6 @@ footer .container {
 
 .container .logo-text {
   width: 264px;
-  margin-top: 16px;
   color: var(--additional-text-color);
   background-color: var(--primary-header-color);
   font-size: 16px;
@@ -351,14 +369,21 @@ footer .container {
 
 /* Portfolio page */
 
-.item-button {
-  display: inline-block;
+.portfolio {
+  padding: 96px 0 120px;
+}
+
+.container .list-button {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 72px;
 }
 
 .item-button .button {
   padding: 12px 24px;
   border-radius: 4px;
-  border: none;
+  border: 1px solid #e7e9fc;
 
   color: var(--accent-color);
   background-color: var(--portfolio-button);
@@ -375,6 +400,7 @@ footer .container {
 
 .item-button .button:hover,
 .item-button .button:focus {
+  border: 1px solid transparent;
   color: var(--additional-text-color);
   background-color: var(--select-color);
   font-weight: 500;
@@ -393,37 +419,29 @@ footer .container {
   padding-bottom: 72px;
 }
 
-.flex-container .list {
+.container .flex-list {
   display: flex;
   flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 
-.flex-container {
-  padding-bottom: 120px;
-}
-
-.list .flex-element {
-  width: 360px;
-  margin-right: 24px;
-  margin-bottom: 48px;
-  border: 1px solid #e7e9fc;
-}
-
-.list .flex-element :nth-child(3n) {
-  margin-right: 0;
-}
-
-.list .flex-element:nth-last-child(-n + 3) {
-  margin-bottom: 0;
+.flex-list .flex-element {
+  width: calc((100% - 48px) / 3);
 }
 
 .link {
   text-decoration: none;
 }
 
-.link .title {
-  margin-top: 32px;
-  margin-left: 16px;
+.program {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
+.program .title {
+  margin-bottom: 8px;
   color: var(--primary-header-color);
   font-weight: 500;
   font-size: 20px;
@@ -431,21 +449,18 @@ footer .container {
   font-family: "Roboto", sans-serif;
 }
 
-.link .title:hover,
-.link .title:focus {
+.program .title:hover,
+.program .title:focus {
   color: var(--select-color);
 }
 
-.link .text {
-  margin-top: 8px;
-  margin-left: 16px;
-  margin-bottom: 32px;
+.program .text {
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.5;
 }
 
-.link .text:hover,
-.link .text:focus {
+.program .text:hover,
+.program .text:focus {
   color: var(--select-color);
 }
