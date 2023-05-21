@@ -238,7 +238,7 @@ ul {
 /* Section service */
 
 .section-service {
-  padding-top: 120px;
+  padding-top: 0;
   padding-bottom: 120px;
 }
 
@@ -276,7 +276,6 @@ ul {
 }
 
 .section-team .container .title {
-  margin-top: 120px;
   margin-bottom: 72px;
 
   color: var(--primary-header-color);
@@ -294,7 +293,6 @@ ul {
 }
 
 .list-team .list-item {
-  margin-bottom: 120px;
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
 
@@ -369,7 +367,7 @@ ul {
   color: var(--additional-text-color);
   background-color: var(--primary-header-color);
   font-size: 16px;
-  line-height: 1.15;
+  line-height: 1.5;
 }
 
 /* Portfolio page */
@@ -420,8 +418,6 @@ ul {
 .portfolio .container .list-button {
   list-style: none;
   text-align: center;
-  padding-top: 168px;
-  padding-bottom: 72px;
 }
 
 .container .flex-list {
